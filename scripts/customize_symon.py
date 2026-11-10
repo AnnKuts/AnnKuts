@@ -24,6 +24,13 @@ for filename in ('render.ts', 'graphRender.ts', 'isoRender.ts'):
         ('body: "#1f2328"', 'body: "#d97721"'),
     ])
 
+    patch(root / 'src' / 'render.ts', [
+        (
+            'const openR = pixels(sprites.SIT_EYES, pal.accent, 0, y0).join("");',
+            'const openR = pixels(sprites.SIT_EYES, "#4ADE80", 0, y0).join("");',
+        ),
+    ])
+
 patch(root / 'src' / 'state.ts', [
     (
         'const where = name ? `welcome to ${name}\'s corner` : "welcome to my corner";',
