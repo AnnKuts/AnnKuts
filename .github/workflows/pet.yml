@@ -1,0 +1,158 @@
+name: Cat Symon
+
+on:
+  schedule:
+    - cron: "23 */6 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  ginger-cat:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout profile
+        uses: actions/checkout@v4
+
+      - name: Install Bun
+        uses: oven-sh/setup-bun@v2
+
+      - name: Get YourTomo source
+        run: |
+          git clone --depth 1 \
+            https://github.com/knowprasad/YourTomo.git \
+            /tmp/yourtomo
+
+
+      - name: Make the cat ginger
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+
+          files = [
+              Path("/tmp/yourtomo/src/render.ts"),
+              Path("/tmp/yourtomo/src/graphRender.ts"),
+              Path("/tmp/yourtomo/src/isoRender.ts"),
+          ]
+
+          replacements = {
+              'body: "#e6edf3"': 'body: "#f28c38"',
+              'body: "#1f2328"': 'body: "#d97721"',
+          }
+
+          for path in files:
+              text = path.read_text()
+
+              for old, new in replacements.items():
+                  if old not in text:
+                      raise RuntimeError(
+                          f"Color not found: {old} in {path}"
+                      )
+                  text = text.replace(old, new, 1)
+
+              path.write_text(text)
+          PY
+      - name: Customize Symon's dialogues
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+
+          root = Path("/tmp/yourtomo/src")
+          render = root / "render.ts"
+          state = root / "state.ts"
+          generator = Path("/tmp/yourtomo/generate.ts")
+
+          def change(file, old, new):
+              content = file.read_text()
+              if old not in content:
+                  raise RuntimeError(f"Text not found: {old}")
+              file.write_text(content.replace(old, new, 1))
+
+          # 1. TIME-BASED GREETING
+          change(
+              state,
+              """const where = name ? `welcome to ${name}'s corner` : "welcome to my corner";""",
+              """const where = name ? `${name} codes, Symon supervises` : "Symon supervises";"""
+          )
+
+          # 2. INTRO BUBBLE
+          change(
+              render,
+              "scroll down for projects + contact",
+              "scroll down, my human made stuff"
+          )
+
+          # 3. ROTATING BUBBLES
+          change(
+              render,
+              'if (hackingOn) hints.push(`hacking on ${hackingOn}`);',
+              'if (hackingOn) hints.push(`my human works on ${hackingOn}`);'
+          )
+
+          change(
+              render,
+              'hints.push("featured projects ↓", "live stats + graphs ↓");',
+              'hints.push("check out her projects ↓", "numbers and nerdy stuff ↓");'
+          )
+
+          change(
+              render,
+              'if (contact) hints.push(`say hi: ${contact}`);',
+              'if (contact) hints.push(`find Anna: ${contact}`);'
+          )
+
+          # 4. SLEEPING CAT
+          change(
+              render,
+              "dreaming in ${esc(topLang)}",
+              "dreaming of ${esc(topLang)} snacks"
+          )
+
+          # 5. CUSTOM STATUS CAPTIONS
+          change(
+              generator,
+              'status = applyForceState(status, process.env.PET_FORCE_STATE || "");',
+              '''status = applyForceState(status, process.env.PET_FORCE_STATE || "");
+
+              const symonLines: Record<string, string> = {
+                  zoomies: "Symon.exe is chasing bugs!",
+                  sleeping: "Symon is sleeping. Shhh...",
+                  content: "Symon approves this code. Probably.",
+                  hungry: "No commits? No treats!",
+                  grumpy: "Symon is judging your code.",
+                  release: "New release! Where are my treats?",
+                  overheat: "The CI is on fire. Meow.",
+                  sick: "Too many issues. Send help.",
+                  hibernating: "Symon is on vacation."
+              };
+
+              status.caption = symonLines[status.state] ?? status.caption;'''
+          )
+          PY
+      - name: Generate animated ginger cat
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          PET_USER: AnnKuts
+          PET_NAME: Anna
+          PET_CAT_NAME: Symon
+          PET_TZ_OFFSET_MINUTES: "120"
+          PET_CONTACT: "anjakuts@gmail.com"
+          PET_ACCENT: "#F472B6"
+          PET_OUTPUT_DIR: ${{ github.workspace }}/dist
+          PET_ATTRIBUTION: "true"
+          PET_FORCE_STATE: ""
+        run: bun /tmp/yourtomo/generate.ts
+
+      - name: Save generated animations
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add dist/
+
+          if ! git diff --cached --quiet; then
+            git commit -m "Update Ginger cat [skip ci]"
+            git push
+          fi
