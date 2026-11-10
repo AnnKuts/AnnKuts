@@ -3,53 +3,31 @@
 <!-- HEADER -->
 <!-- ============================================ -->
 
-<div align="center">
-
-  <!-- PINK HEADER: DARK / LIGHT -->
-
-  <picture>
-    <source
-      media="(prefers-color-scheme: dark)"
-      srcset="https://capsule-render.vercel.app/api?type=waving&amp;color=0:45112E,50:AD3277,100:F472B6&amp;height=230&amp;section=header&amp;text=Anna%20Kuts&amp;fontColor=FFFFFF&amp;fontSize=56&amp;fontAlignY=34&amp;animation=fadeIn&amp;desc=Building%20products%20from%20zero%20to%20one&amp;descSize=22&amp;descAlignY=58">
-    <source
-      media="(prefers-color-scheme: light)"
-      srcset="https://capsule-render.vercel.app/api?type=waving&amp;color=0:FDE7F4,50:FBC2EB,100:F472B6&amp;height=230&amp;section=header&amp;text=Anna%20Kuts&amp;fontColor=831843&amp;fontSize=56&amp;fontAlignY=34&amp;animation=fadeIn&amp;desc=Building%20products%20from%20zero%20to%20one&amp;descSize=22&amp;descAlignY=58">
-    <img
-      alt="Anna Kuts — Building products from zero to one"
-      src="https://capsule-render.vercel.app/api?type=waving&amp;color=0:FDE7F4,50:FBC2EB,100:F472B6&amp;height=230&amp;section=header&amp;text=Anna%20Kuts&amp;fontColor=831843&amp;fontSize=56&amp;fontAlignY=34&amp;animation=fadeIn&amp;desc=Building%20products%20from%20zero%20to%20one&amp;descSize=22&amp;descAlignY=58"
-      width="100%">
-  </picture>
-
-</div>
-
-
-<!-- ============================================ -->
-<!-- MEET SYMON -->
-<!-- ============================================ -->
 
 <div align="center">
-  <h2>Product Manager | Software Engineering student at KPI</h2>
-  <p><i>Meet my cat Symon — my personal code supervisor 🐈</i></p>
+<p align="center">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=F472B6&text=Anna%20Kuts&height=200&section=header&fontColor=FFFFFF&fontSize=52" width="100%"/>
+</p>
+<!-- <picture>
+<source media="(prefers-color-scheme: dark)" srcset="https://capsule-render.vercel.app/api?type=waving&color=0:45112E,50:AD3277,100:F472B6&height=230&section=header&text=Anna%20Kuts&fontColor=FFFFFF&fontSize=56&fontAlignY=34&animation=fadeIn&desc=Building%20products%20from%20zero%20to%20one&descSize=22&descAlignY=58">
+<source media="(prefers-color-scheme: light)" srcset="https://capsule-render.vercel.app/api?type=waving&color=0:FDE7F4,50:FBC2EB,100:F472B6&height=230&section=header&text=Anna%20Kuts&fontColor=831843&fontSize=56&fontAlignY=34&animation=fadeIn&desc=Building%20products%20from%20zero%20to%20one&descSize=22&descAlignY=58">
+<img alt="Anna Kuts — Building products from zero to one" src="https://capsule-render.vercel.app/api?type=waving&color=0:FDE7F4,50:FBC2EB,100:F472B6&height=230&section=header&text=Anna%20Kuts&fontColor=831843&fontSize=56&fontAlignY=34&animation=fadeIn&desc=Building%20products%20from%20zero%20to%20one&descSize=22&descAlignY=58" width="100%">
+</picture> -->
+
+<h2>Product Manager | Software Engineering student at KPI</h2>
+
+<p><i>Meet my cat Symon — my personal code supervisor 🐈</i></p>
+
+<!-- ANIMATED GINGER CAT -->
+
+<picture>
+<source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/AnnKuts/AnnKuts/main/dist/pet.svg">
+<source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/AnnKuts/AnnKuts/main/dist/pet-light.svg">
+<img alt="Animated ginger cat Symon" src="https://raw.githubusercontent.com/AnnKuts/AnnKuts/main/dist/pet.svg" width="100%">
+</picture>
+
 </div>
 
-  <!-- ANIMATED GINGER CAT -->
-
-  <picture>
-    <source
-      media="(prefers-color-scheme: dark)"
-      srcset="https://raw.githubusercontent.com/AnnKuts/AnnKuts/main/dist/pet.svg">
-    <source
-      media="(prefers-color-scheme: light)"
-      srcset="https://raw.githubusercontent.com/AnnKuts/AnnKuts/main/dist/pet-light.svg">
-    <img
-      alt="Animated ginger cat Symon"
-      src="https://raw.githubusercontent.com/AnnKuts/AnnKuts/main/dist/pet.svg"
-      width="100%">
-  </picture>
-
-</div>
-
----
 
 <!-- ============================================ -->
 <!-- CONTACT -->
@@ -57,23 +35,18 @@
 
 <div align="center">
 
-<h2>Contact me at</h2>
+  <h2>Contact me at</h2>
 
   <p>
     <a href="https://www.linkedin.com/in/anna-kuts-b0ab1a2b7/">
-      <img
-        src="https://img.shields.io/badge/LinkedIn-F472B6?style=for-the-badge&amp;logo=linkedin&amp;logoColor=white"
-        alt="LinkedIn">
+      <img src="https://img.shields.io/badge/LinkedIn-F472B6?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn">
     </a>
     <a href="mailto:anjakuts@gmail.com">
-      <img
-        src="https://img.shields.io/badge/Email-DB2777?style=for-the-badge&amp;logo=gmail&amp;logoColor=white"
-        alt="Email">
+      <img src="https://img.shields.io/badge/Email-DB2777?style=for-the-badge&logo=gmail&logoColor=white" alt="Email">
     </a>
   </p>
 
 </div>
-
 
 <!-- ============================================ -->
 <!-- TOOLS -->
@@ -100,7 +73,6 @@
 ![Supabase](https://img.shields.io/badge/Supabase-3FCF8E?style=for-the-badge&logo=supabase&logoColor=white)
 
 
----
 
 <!-- ============================================ -->
 <!-- GITHUB STATISTICS -->
@@ -110,39 +82,33 @@
 
 <h2>my GitHub in numbers</h2>
 
-  <!-- TOP LANGUAGES BY COMMIT -->
+<!-- TOP LANGUAGES -->
 
-  <picture>
-    <source
-      media="(prefers-color-scheme: dark)"
-      srcset="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=AnnKuts&amp;theme=github_dark">
-    <source
-      media="(prefers-color-scheme: light)"
-      srcset="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=AnnKuts&amp;theme=default">
-    <img
-      src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=AnnKuts&amp;theme=github_dark"
-      width="49%"
-      alt="Top languages by commit">
-  </picture>
+<picture>
+  <source media="(prefers-color-scheme: dark)"
+    srcset="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=AnnKuts&amp;theme=github_dark&amp;title_color=F472B6&amp;text_color=FBCFE8&amp;bg_color=0D1117&amp;border_color=DB2777&amp;chart_color=F472B6">
+  <source media="(prefers-color-scheme: light)"
+    srcset="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=AnnKuts&amp;theme=default&amp;title_color=BE185D&amp;text_color=831843&amp;bg_color=FFF1F7&amp;border_color=F9A8D4&amp;chart_color=EC4899">
+  <img
+    src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=AnnKuts&amp;theme=github_dark&amp;title_color=F472B6&amp;text_color=FBCFE8&amp;bg_color=0D1117&amp;border_color=DB2777&amp;chart_color=F472B6"
+    width="49%"
+    alt="Top languages by commit">
+</picture>
 
+<!-- GITHUB STATS -->
 
-  <!-- GITHUB STATS -->
-
-  <picture>
-    <source
-      media="(prefers-color-scheme: dark)"
-      srcset="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=AnnKuts&amp;theme=github_dark">
-    <source
-      media="(prefers-color-scheme: light)"
-      srcset="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=AnnKuts&amp;theme=default">
-    <img
-      src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=AnnKuts&amp;theme=github_dark"
-      width="49%"
-      alt="GitHub statistics">
-  </picture>
+<picture>
+  <source media="(prefers-color-scheme: dark)"
+    srcset="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=AnnKuts&amp;theme=github_dark&amp;title_color=F472B6&amp;text_color=FBCFE8&amp;bg_color=0D1117&amp;border_color=DB2777&amp;icon_color=F9A8D4">
+  <source media="(prefers-color-scheme: light)"
+    srcset="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=AnnKuts&amp;theme=default&amp;title_color=BE185D&amp;text_color=831843&amp;bg_color=FFF1F7&amp;border_color=F9A8D4&amp;icon_color=DB2777">
+  <img
+    src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=AnnKuts&amp;theme=github_dark&amp;title_color=F472B6&amp;text_color=FBCFE8&amp;bg_color=0D1117&amp;border_color=DB2777&amp;icon_color=F9A8D4"
+    width="49%"
+    alt="GitHub statistics">
+</picture>
 
 </div>
-
 
 <!-- ============================================ -->
 <!-- SYMON'S CONTRIBUTION CITY -->
@@ -169,4 +135,3 @@
 
 </div>
 
----
