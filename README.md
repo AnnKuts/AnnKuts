@@ -14,6 +14,14 @@
 <img alt="Anna Kuts — Building products from zero to one" src="https://capsule-render.vercel.app/api?type=waving&color=0:FDE7F4,50:FBC2EB,100:F472B6&height=230&section=header&text=Anna%20Kuts&fontColor=831843&fontSize=56&fontAlignY=34&animation=fadeIn&desc=Building%20products%20from%20zero%20to%20one&descSize=22&descAlignY=58" width="100%">
 </picture> -->
 
+<p align="center">
+  <img
+    src="https://raw.githubusercontent.com/AnnKuts/AnnKuts/main/assets/banner.svg"
+    alt="Anna Kuts animated banner"
+    width="100%">
+</p>
+
+
 <h2>Product Manager | Software Engineering student at KPI</h2>
 
 <p><i>Meet my cat Symon — my personal code supervisor 🐈</i></p>
