@@ -83,7 +83,7 @@
 <rect x="6" y="104" width="6" height="6" fill="#f28c38"/>
 <rect x="108" y="98" width="6" height="6" fill="#f28c38"/>
 <rect x="108" y="104" width="6" height="6" fill="#f28c38"/>
-<g><animate attributeName="opacity" values="1;0;1" keyTimes="0;0.96;1" calcMode="discrete" dur="4.2s" repeatCount="indefinite"/><rect x="30" y="92" width="6" height="6" fill="#F472B6"/><rect x="84" y="92" width="6" height="6" fill="#F472B6"/></g>
+<g><animate attributeName="opacity" values="1;0;1" keyTimes="0;0.96;1" calcMode="discrete" dur="4.2s" repeatCount="indefinite"/><rect x="30" y="92" width="6" height="6" fill="#4ADE80"/><rect x="84" y="92" width="6" height="6" fill="#4ADE80"/></g>
 <g opacity="0"><animate attributeName="opacity" values="0;1;0" keyTimes="0;0.96;1" calcMode="discrete" dur="4.2s" repeatCount="indefinite"/><rect x="30" y="92" width="6" height="6" fill="#0d1117"/><rect x="84" y="92" width="6" height="6" fill="#0d1117"/></g>
 </g>
 <g opacity="0"><animate attributeName="opacity" values="1;1;0;0;1;1" keyTimes="0;0.12;0.13;0.82;0.83;1" calcMode="discrete" dur="20s" begin="7s" repeatCount="indefinite"/><g><animate attributeName="opacity" values="1;0;1" calcMode="discrete" dur="0.5s" repeatCount="indefinite"/><rect x="108" y="86" width="6" height="6" fill="#f28c38"/><rect x="114" y="80" width="6" height="6" fill="#f28c38"/><rect x="114" y="86" width="6" height="6" fill="#f28c38"/></g></g>
@@ -107,5 +107,5 @@
 <g opacity="0"><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.250;0.290;0.433;0.473;1" dur="18s" begin="5s" repeatCount="indefinite"/><rect x="673.6" y="14" width="204.39999999999998" height="30" rx="9" fill="#30363d"/><polygon points="699.6,44 717.6,44 706.6,54" fill="#30363d"/><text x="684.6" y="33" font-family="monospace" font-size="12" fill="#f28c38">check out her projects ↓</text></g>
 <g opacity="0"><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.500;0.540;0.683;0.723;1" dur="18s" begin="5s" repeatCount="indefinite"/><rect x="666" y="14" width="212" height="30" rx="9" fill="#30363d"/><polygon points="692,44 710,44 699,54" fill="#30363d"/><text x="677" y="33" font-family="monospace" font-size="12" fill="#f28c38">numbers and nerdy stuff ↓</text></g>
 <g opacity="0"><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.750;0.790;0.933;0.973;1" dur="18s" begin="5s" repeatCount="indefinite"/><rect x="635.6" y="14" width="242.39999999999998" height="30" rx="9" fill="#30363d"/><polygon points="661.6,44 679.6,44 668.6,54" fill="#30363d"/><text x="646.6" y="33" font-family="monospace" font-size="12" fill="#f28c38">find Anna: anjakuts@gmail.com</text></g>
-<text x="16" y="180" font-family="monospace" font-size="12" fill="#8b949e">state: release - New release! Where are my treats? · 3-day streak · 3 pushes · 0 prs this week · 542 contributions this year · regenerated every 6h · github-pet by prsdx</text>
+<text x="16" y="180" font-family="monospace" font-size="12" fill="#8b949e">state: release - New release! Where are my treats? · 3-day streak · 3 pushes · 0 prs this week · 549 contributions this year · regenerated every 6h · github-pet by prsdx</text>
 </svg>
