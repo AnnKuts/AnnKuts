@@ -99,7 +99,7 @@
     srcset="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=AnnKuts&amp;theme=default&amp;title_color=BE185D&amp;text_color=831843&amp;bg_color=FFF1F7&amp;border_color=F9A8D4&amp;chart_color=EC4899">
   <img
     src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=AnnKuts&amp;theme=github_dark&amp;title_color=F472B6&amp;text_color=FBCFE8&amp;bg_color=0D1117&amp;border_color=DB2777&amp;chart_color=F472B6"
-    width="49%"
+    width="40%"
     alt="Top languages by commit">
 </picture>
 
@@ -112,7 +112,7 @@
     srcset="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=AnnKuts&amp;theme=default&amp;title_color=BE185D&amp;text_color=831843&amp;bg_color=FFF1F7&amp;border_color=F9A8D4&amp;icon_color=DB2777">
   <img
     src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=AnnKuts&amp;theme=github_dark&amp;title_color=F472B6&amp;text_color=FBCFE8&amp;bg_color=0D1117&amp;border_color=DB2777&amp;icon_color=F9A8D4"
-    width="49%"
+    width="40%"
     alt="GitHub statistics">
 </picture>
 
