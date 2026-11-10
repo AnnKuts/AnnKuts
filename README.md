@@ -6,7 +6,7 @@
 
 <div align="center">
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=F472B6&text=Anna%20Kuts&height=200&section=header&fontColor=FFFFFF&fontSize=52" width="100%"/>
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=F472B6&text=Hello%2C%20world%21&section=header&fontColor=FFFFFF&fontSize=52" width="100%"/>
 </p>
 <!-- <picture>
 <source media="(prefers-color-scheme: dark)" srcset="https://capsule-render.vercel.app/api?type=waving&color=0:45112E,50:AD3277,100:F472B6&height=230&section=header&text=Anna%20Kuts&fontColor=FFFFFF&fontSize=56&fontAlignY=34&animation=fadeIn&desc=Building%20products%20from%20zero%20to%20one&descSize=22&descAlignY=58">
