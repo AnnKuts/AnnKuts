@@ -18,18 +18,20 @@ def patch(path: Path, replacements: list[tuple[str, str]]) -> None:
     path.write_text(text, encoding='utf-8')
 
 
+
 for filename in ('render.ts', 'graphRender.ts', 'isoRender.ts'):
     patch(root / 'src' / filename, [
         ('body: "#e6edf3"', 'body: "#f28c38"'),
         ('body: "#1f2328"', 'body: "#d97721"'),
     ])
 
-    patch(root / 'src' / 'render.ts', [
-        (
-            'const openR = pixels(sprites.SIT_EYES, pal.accent, 0, y0).join("");',
-            'const openR = pixels(sprites.SIT_EYES, "#4ADE80", 0, y0).join("");',
-        ),
-    ])
+# --- GREEN EYES ---
+patch(root / 'src' / 'render.ts', [
+    (
+        'const openR = pixels(sprites.SIT_EYES, pal.accent, 0, y0).join("");',
+        'const openR = pixels(sprites.SIT_EYES, "#4ADE80", 0, y0).join("");',
+    ),
+])
 
 patch(root / 'src' / 'state.ts', [
     (
