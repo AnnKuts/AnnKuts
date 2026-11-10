@@ -131,6 +131,104 @@ jobs:
               status.caption = symonLines[status.state] ?? status.caption;'''
           )
           PY
+          
+          - name: Fix public repository statistics
+            run: |
+              python3 - <<'PY'
+              from pathlib import Path
+
+              path = Path("/tmp/yourtomo/src/githubApi.ts")
+              code = path.read_text()
+
+              # Fix repository fetching
+              start = code.index("export async function fetchRepos(")
+              end = code.index("export async function fetchLanguages(", start)
+
+              section = code[start:end]
+
+              old = 'if (token()) attempts.push(["/user/repos?per_page=100&affiliation=owner&visibility=public", true]);'
+              new = 'attempts.push([`/users/${user}/repos?per_page=100&type=owner`, true]);'
+
+              if old not in section:
+                  raise RuntimeError("Repository API code changed")
+
+              section = section.replace(old, new)
+              section = section.replace(
+                  "if (isAuthFailure(err)) return [];",
+                  "// Try the public endpoint instead."
+              )
+
+              code = code[:start] + section + code[end:]
+
+              # Fix language fetching fallback
+              start = code.index("export async function fetchLanguages(")
+              end = code.index("// repos whose CI", start)
+
+              section = code[start:end]
+
+              old = "if (isAuthFailure(err)) return null;"
+              if old not in section:
+                  raise RuntimeError("Language API code changed")
+
+              section = section.replace(
+                  old,
+                  "// Try public language data instead."
+              )
+
+              code = code[:start] + section + code[end:]
+              path.write_text(code)
+
+              print("Public repository API fallback enabled")
+              PY
+
+      - name: Fix public repository statistics
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+
+          path = Path("/tmp/yourtomo/src/githubApi.ts")
+          code = path.read_text()
+
+          # Fix repository fetching
+          start = code.index("export async function fetchRepos(")
+          end = code.index("export async function fetchLanguages(", start)
+
+          section = code[start:end]
+
+          old = 'if (token()) attempts.push(["/user/repos?per_page=100&affiliation=owner&visibility=public", true]);'
+          new = 'attempts.push([`/users/${user}/repos?per_page=100&type=owner`, true]);'
+
+          if old not in section:
+              raise RuntimeError("Repository API code changed")
+
+          section = section.replace(old, new)
+          section = section.replace(
+              "if (isAuthFailure(err)) return [];",
+              "// Try the public endpoint instead."
+          )
+
+          code = code[:start] + section + code[end:]
+
+          # Fix language fetching fallback
+          start = code.index("export async function fetchLanguages(")
+          end = code.index("// repos whose CI", start)
+
+          section = code[start:end]
+
+          old = "if (isAuthFailure(err)) return null;"
+          if old not in section:
+              raise RuntimeError("Language API code changed")
+
+          section = section.replace(
+              old,
+              "// Try public language data instead."
+          )
+
+          code = code[:start] + section + code[end:]
+          path.write_text(code)
+
+          print("Public repository API fallback enabled")
+          PY
       - name: Generate animated ginger cat
         env:
           GITHUB_TOKEN: ${{ github.token }}
