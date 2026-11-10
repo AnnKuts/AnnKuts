@@ -143,3 +143,10 @@
 
 </div>
 
+
+<div align="center">
+  <img
+    src="https://komarev.com/ghpvc/?username=AnnKuts&label=Profile%20views&color=F472B6&style=flat"
+    alt="Profile views">
+</div>
+
